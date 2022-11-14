@@ -28,12 +28,9 @@ const Index = () => {
   const [extras, setExtras] = useState([]);
 
   const handleSize = (sizeIndex) => {
-    console.log(sizeIndex);
-    console.log(size);
     const difference = prices[sizeIndex] - prices[size];
     setSize(sizeIndex);
     changePrice(difference);
-    console.log(difference);
   };
 
   const changePrice = (number) => {
