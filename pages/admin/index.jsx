@@ -5,6 +5,7 @@ import Title from "../../components/ui/Title";
 import { adminSchema } from "../../schema/admin";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
+import axios from "axios";
 const Login = () => {
   const { push } = useRouter();
   const onSubmit = async (values, actions) => {
@@ -72,7 +73,9 @@ const Login = () => {
           ))}
         </div>
         <div className="flex flex-col w-full gap-y-3 mt-6">
-          <button className="btn-primary">LOGIN</button>
+          <button className="btn-primary " type="submit">
+            LOGIN
+          </button>
           <Link href="/">
             <span className="text-sm underline cursor-pointer text-secondary">
               Home Page
@@ -85,5 +88,17 @@ const Login = () => {
 };
 export const getServerSideProps = (ctx) => {
   const myCookie = ctx.req?.cookies || "";
+  if (myCookie.token === process.env.ADMIN_TOKEN) {
+    return {
+      redirect: {
+        destination: "/admin/profile",
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: {},
+  };
 };
 export default Login;
