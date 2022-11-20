@@ -222,7 +222,8 @@ const AddProduct = ({ setIsProductModal }) => {
                     key={index}
                     onClick={() => {
                       setExtraOptions(
-                        extraOptions.filter((_, i) => i !== index)
+                        extraOptions &&
+                          extraOptions.filter((_, i) => i !== index)
                       );
                     }}
                   >
