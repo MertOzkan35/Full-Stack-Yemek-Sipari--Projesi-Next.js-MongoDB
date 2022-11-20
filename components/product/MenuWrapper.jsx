@@ -7,11 +7,12 @@ const MenuWrapper = ({ categoryList, productList }) => {
   const [filter, setFilter] = useState([]);
 
   useEffect(() => {
-    setFilter();
-    // productList.filter(
-    //   (product) =>
-    //     product.category === categoryList[active].title.toLowerCase()
-    // )
+    setFilter(
+      productList.filter(
+        (product) =>
+          product.category === categoryList[active].title.toLowerCase()
+      )
+    );
   }, [categoryList, productList, active]);
   return (
     <div className="container mx-auto  mb-16">

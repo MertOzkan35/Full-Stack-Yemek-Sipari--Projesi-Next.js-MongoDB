@@ -221,8 +221,9 @@ const AddProduct = ({ setIsProductModal }) => {
                     className="inline-block border border-orange-500 text-orange-500  p-1 rounded-xl text-xs cursor-pointer"
                     key={index}
                     onClick={() => {
-                      setExtraOptions();
-                      // extraOptions.filter((_, i) => i !== index)
+                      setExtraOptions(
+                        extraOptions.filter((_, i) => i !== index)
+                      );
                     }}
                   >
                     {item.text}

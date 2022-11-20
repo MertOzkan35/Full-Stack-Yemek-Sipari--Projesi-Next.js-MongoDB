@@ -41,7 +41,7 @@ const Category = () => {
         await axios.delete(
           `${process.env.NEXT_PUBLIC_API_URL}/categories/${id}`
         );
-        // setCategories(categories.filter((cat) => cat._id !== id));
+        setCategories(categories.filter((cat) => cat._id !== id));
       }
     } catch (err) {
       console.log(err);
