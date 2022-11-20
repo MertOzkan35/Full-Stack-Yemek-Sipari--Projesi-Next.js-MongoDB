@@ -30,7 +30,7 @@ const Order = () => {
           status: currentStatus + 1,
         }
       );
-      setOrders([res.data, ...orders.filter((order) => order._id !== id)]);
+      // setOrders([res.data, ...orders.filter((order) => order._id !== id)]);
       // iki kere gelmesin diye
     } catch (err) {
       console.log(err);
