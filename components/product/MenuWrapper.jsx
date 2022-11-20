@@ -8,10 +8,11 @@ const MenuWrapper = ({ categoryList, productList }) => {
 
   useEffect(() => {
     setFilter(
-      productList.filter(
-        (product) =>
-          product.category === categoryList[active].title.toLowerCase()
-      )
+      productList &&
+        productList.filter(
+          (product) =>
+            product.category === categoryList[active].title.toLowerCase()
+        )
     );
   }, [categoryList, productList, active]);
   return (
@@ -35,7 +36,8 @@ const MenuWrapper = ({ categoryList, productList }) => {
       </div>
 
       <div className="mt-8 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 min-h-[450px]">
-        {filter.length > 0 &&
+        {filter &&
+          filter.length > 0 &&
           filter.map((product) => (
             <MenuItem key={product._id} product={product} />
           ))}
