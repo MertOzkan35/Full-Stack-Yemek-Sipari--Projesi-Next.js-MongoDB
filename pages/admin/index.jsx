@@ -62,6 +62,9 @@ const Login = () => {
         onSubmit={handleSubmit}
       >
         <Title addClass="text-[40px] mb-6">Admin Login</Title>
+        <Title addClass="text-[40px] mb-6">
+          UserName: admin Password:123456
+        </Title>
         <div className="flex flex-col gap-y-3 w-full">
           {inputs.map((input) => (
             <Input
