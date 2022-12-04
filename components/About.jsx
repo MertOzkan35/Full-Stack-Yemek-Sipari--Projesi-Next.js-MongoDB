@@ -14,7 +14,7 @@ const About = () => {
           <Title addClass="text-[40px]">We Are Feane</Title>
           <p className="my-5 flex flex-col items-center">
             There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
+            the majority have suffered alteration in some form,, by injected
             humour, or randomised words which dont look even slightly
             believable. If you are going to use a passage of Lorem Ipsum, you
             need to be sure there isn`t anything embarrassing hidden in the
