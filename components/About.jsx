@@ -18,7 +18,7 @@ const About = () => {
             humour, or randomised words which dont look even slightly
             believable. If you are going to use a passage of Lorem Ipsum, you
             need to be sure there isn`t anything embarrassing hidden in the
-            middle of text. All
+            middle of text. All.
           </p>
           <button className="btn-primary">Read More</button>
         </div>
